@@ -1,0 +1,8 @@
+com\aplana\utils\TestProperties.class
+com\aplana\steps\MainPageSteps.class
+com\aplana\steps\DepositPageSteps.class
+com\aplana\pages\MainPage.class
+com\aplana\steps\CucumberSteps.class
+com\aplana\pages\DepositPage.class
+com\aplana\pages\BasePage.class
+com\aplana\steps\BasePageSteps.class
