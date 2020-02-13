@@ -44,20 +44,31 @@ public class DepositPageSteps {
     }
 
     @Step("Отмечаем ежемесячную капитализацию")
-    public void selectCapitalization(){
-        String s = depositPage.getDepositResult();
-        depositPage.capitalization.click();
-        wait.until((Function<? super WebDriver, Boolean>) driver -> !(s.equals(depositPage.getDepositResult())));
+    public void selectCapitalization(String b){
+        if (b.equals("true")) {
+            String s = depositPage.getDepositResult();
+            depositPage.capitalization.click();
+            wait.until((Function<? super WebDriver, Boolean>) driver -> !(s.equals(depositPage.getDepositResult())));
+        }
+    }
+
+    @Step("Отмечаем частичное снятие")
+    public void selectPartial(String b){
+        if (b.equals("true")) {
+            String s = depositPage.getDepositResult();
+            depositPage.partial.click();
+            wait.until((Function<? super WebDriver, Boolean>) driver -> !(s.equals(depositPage.getDepositResult())));
+        }
     }
 
     @Step("Проверяем какая сумма будет по истечению срока вклада")
-    public void assertDepositResult(){
-        Assert.assertEquals("Результат по сумме вклада не совпадает","561 383,43",depositPage.depositResult.getText());
+    public void assertDepositResult(String result){
+        Assert.assertEquals("Результат по сумме вклада не совпадает", result, depositPage.depositResult.getText());
     }
 
     @Step("Проверяем процентную ставку по вкладу")
-    public void assertDepositRate(){
-        Assert.assertEquals("Процентная ставка по вкладу не совпадает","5.35%",depositPage.depositRate.getText());
+    public void assertDepositRate(String rate){
+        Assert.assertEquals("Процентная ставка по вкладу не совпадает", rate, depositPage.depositRate.getText());
     }
 
 }

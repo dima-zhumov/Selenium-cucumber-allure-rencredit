@@ -24,6 +24,9 @@ public class DepositPage extends BasePage {
     @FindBy(xpath = "//input[@name='capitalization']/..")
     public WebElement capitalization;
 
+    @FindBy(xpath = "//input[@name='partial_out']/..")
+    public WebElement partial;
+
     @FindBy(xpath = "//span[@class='js-calc-result']")
     public WebElement depositResult;
 

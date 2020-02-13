@@ -32,19 +32,24 @@ public class CucumberSteps {
         depositPageSteps.inputAmountOfEveryMonthPayment(amount);
     }
 
-    @Когда("^Отмечена ежемесячная капитализация$")
-    public void checkCapitalization() {
-        depositPageSteps.selectCapitalization();
+    @Когда("^Отмечена ежемесячная капитализация (.*)$")
+    public void checkCapitalization(String capitalization) {
+        depositPageSteps.selectCapitalization(capitalization);
     }
 
-    @Когда("^Проверена сумма по истечению срока вклада$")
-    public void assertDepositResult(){
-        depositPageSteps.assertDepositResult();
+    @Когда("^Отмечено частичное снятие (.*)$")
+    public void checkPartial(String partial) {
+        depositPageSteps.selectPartial(partial);
     }
 
-    @Когда("^Проверена процентная ставка по вкладу$")
-    public void assertDepositRate(){
-        depositPageSteps.assertDepositRate();
+    @Когда("^Проверена сумма по истечению срока вклада (.*)$")
+    public void assertDepositResult(String result){
+        depositPageSteps.assertDepositResult(result);
+    }
+
+    @Когда("^Проверена процентная ставка по вкладу (.*)$")
+    public void assertDepositRate(String rate){
+        depositPageSteps.assertDepositRate(rate);
     }
 
 }

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 13306414317,
+              "duration": 12153711263,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 4,
+        "line": 17,
         "name": "Рассчет доходности по вкладу",
         "description": "",
-        "id": "создание-вклада;рассчет-доходности-по-вкладу",
+        "id": "создание-вклада;рассчет-доходности-по-вкладу;;2",
         "after": [
           {
             "result": {
-              "duration": 1265887919,
+              "duration": 1134180939,
               "status": "passed"
             },
             "match": {
@@ -30,11 +30,11 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Сценарий",
+        "keyword": "Структура сценария",
         "steps": [
           {
             "result": {
-              "duration": 8539671660,
+              "duration": 3964168619,
               "status": "passed"
             },
             "line": 5,
@@ -52,7 +52,7 @@
           },
           {
             "result": {
-              "duration": 93978213,
+              "duration": 141844511,
               "status": "passed"
             },
             "line": 6,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 1258698769,
+              "duration": 1220472154,
               "status": "passed"
             },
             "line": 7,
@@ -88,7 +88,7 @@
           },
           {
             "result": {
-              "duration": 1339413623,
+              "duration": 1284155830,
               "status": "passed"
             },
             "line": 8,
@@ -106,7 +106,7 @@
           },
           {
             "result": {
-              "duration": 1281024590,
+              "duration": 1180088625,
               "status": "passed"
             },
             "line": 9,
@@ -124,37 +124,267 @@
           },
           {
             "result": {
-              "duration": 720544615,
+              "duration": 620410647,
               "status": "passed"
             },
             "line": 10,
-            "name": "Отмечена ежемесячная капитализация",
+            "name": "Отмечена ежемесячная капитализация true",
             "match": {
-              "location": "CucumberSteps.checkCapitalization()"
+              "arguments": [
+                {
+                  "val": "true",
+                  "offset": 35
+                }
+              ],
+              "location": "CucumberSteps.checkCapitalization(String)"
             },
             "keyword": "Когда "
           },
           {
             "result": {
-              "duration": 33247156,
+              "duration": 674364,
               "status": "passed"
             },
             "line": 11,
-            "name": "Проверена сумма по истечению срока вклада",
+            "name": "Отмечено частичное снятие false",
             "match": {
-              "location": "CucumberSteps.assertDepositResult()"
+              "arguments": [
+                {
+                  "val": "false",
+                  "offset": 26
+                }
+              ],
+              "location": "CucumberSteps.checkPartial(String)"
             },
             "keyword": "Когда "
           },
           {
             "result": {
-              "duration": 28057147,
+              "duration": 17895353,
               "status": "passed"
             },
             "line": 12,
-            "name": "Проверена процентная ставка по вкладу",
+            "name": "Проверена сумма по истечению срока вклада 561 383,43",
             "match": {
-              "location": "CucumberSteps.assertDepositRate()"
+              "arguments": [
+                {
+                  "val": "561 383,43",
+                  "offset": 42
+                }
+              ],
+              "location": "CucumberSteps.assertDepositResult(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 22654675,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Проверена процентная ставка по вкладу 5.35%",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5.35%",
+                  "offset": 38
+                }
+              ],
+              "location": "CucumberSteps.assertDepositRate(String)"
+            },
+            "keyword": "Когда "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10465104327,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BasePageSteps.startScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Рассчет доходности по вкладу",
+        "description": "",
+        "id": "создание-вклада;рассчет-доходности-по-вкладу;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 872268095,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BasePageSteps.closeScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Структура сценария",
+        "steps": [
+          {
+            "result": {
+              "duration": 3705404453,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Выбран пункт главного меню Вклады",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Вклады",
+                  "offset": 27
+                }
+              ],
+              "location": "CucumberSteps.selectMainMenu(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 124540652,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Выбрана валюта вклада Рубли",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Рубли",
+                  "offset": 22
+                }
+              ],
+              "location": "CucumberSteps.selectDepositCurrency(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 1201829830,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Заполнена сумма вклада 500000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500000",
+                  "offset": 23
+                }
+              ],
+              "location": "CucumberSteps.inputAmountOfDeposit(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 1250634925,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Выбран срок вклада 6",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 19
+                }
+              ],
+              "location": "CucumberSteps.selectPeriodOfDeposit(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 1184821337,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Заполнена сумма ежемесячного пополнения вклада 70000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "70000",
+                  "offset": 47
+                }
+              ],
+              "location": "CucumberSteps.inputAmountOfEveryMonthPayment(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 636495026,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Отмечена ежемесячная капитализация true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "true",
+                  "offset": 35
+                }
+              ],
+              "location": "CucumberSteps.checkCapitalization(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 617789220,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Отмечено частичное снятие true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "true",
+                  "offset": 26
+                }
+              ],
+              "location": "CucumberSteps.checkPartial(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 15805358,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Проверена сумма по истечению срока вклада 867 400,49",
+            "match": {
+              "arguments": [
+                {
+                  "val": "867 400,49",
+                  "offset": 42
+                }
+              ],
+              "location": "CucumberSteps.assertDepositResult(String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 27027777,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Проверена процентная ставка по вкладу 5.15%",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5.15%",
+                  "offset": 38
+                }
+              ],
+              "location": "CucumberSteps.assertDepositRate(String)"
             },
             "keyword": "Когда "
           }
